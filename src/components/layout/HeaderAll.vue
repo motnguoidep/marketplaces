@@ -36,7 +36,7 @@
 
       <q-tabs align="center">
         <q-route-tab to="/page1" label="Home" />
-        <q-route-tab to="/page2" label="" />
+        <q-route-tab to="/page2" label="Product" />
         <q-route-tab to="/page3" label="Page Three" />
       </q-tabs>
     </q-header>
