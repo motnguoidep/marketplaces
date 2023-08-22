@@ -1,5 +1,5 @@
 <template>
-  <q-header elevated class="bg-white text-grey-8 q-py-xs" height-hint="58">
+  <q-header elevated class="mx-auto  fixed top-0 shadow-md lg:bg-opacity-80 bg-gray-50 z-20 px-5 font-semibold text-gray-600 transition-all w-full duration-500 backdrop-blur-md " height-hint="58">
       <q-toolbar>
           <img alt="Logo NetTruyen" src="//st.nettruyenmax.com/data/logos/logo-nettruyen.png">
         <q-space />
@@ -36,7 +36,7 @@
 
       <q-tabs align="center">
         <q-route-tab to="/page1" label="Home" />
-        <q-route-tab to="/page2" label="Page Two" />
+        <q-route-tab to="/page2" label="" />
         <q-route-tab to="/page3" label="Page Three" />
       </q-tabs>
     </q-header>

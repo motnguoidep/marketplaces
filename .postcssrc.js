@@ -4,10 +4,11 @@
 module.exports = {
   plugins: [
     // https://github.com/postcss/autoprefixer
+    require('tailwindcss'),
     require('autoprefixer')({
       overrideBrowserslist: [
         'last 4 Chrome versions',
-        'last 4 Firefox versions',
+        'last 4 Firefox versions',  
         'last 4 Edge versions',
         'last 4 Safari versions',
         'last 4 Android versions',
@@ -16,7 +17,7 @@ module.exports = {
         'last 4 iOS versions'
       ]
     }),
-    require('tailwindcss'),
+ 
 
     // https://github.com/elchininet/postcss-rtlcss
     // If you want to support RTL css, then
