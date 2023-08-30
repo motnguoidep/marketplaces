@@ -43,7 +43,7 @@
 
 
 
-  <q-page-container>
+  <q-page-container  style="background-color: #f8f8f8;">
     <router-view />
 </q-page-container></template>
 

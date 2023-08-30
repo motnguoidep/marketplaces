@@ -52,31 +52,15 @@
             </a>
           </ul>
         </div>
-        <div
-          class="swiper swiper-initialized swiper-horizontal mySwiper rounded-md shadow-md lg:col-start-2 lg:col-end-5 lg:col-span-3 w-full swiper-backface-hidden"
-          style="--swiper-navigation-color: #f8f8f8">
-          <div class="swiper-wrapper" style="
-              transition-duration: 0ms;
-              transform: translate3d(0px, 0px, 0px);
-            ">
-            <div class="swiper-slide swiper-slide-active" style="width: 755px; margin-right: 30px">
-              <img class="" src="/banner-1.png" alt="Slide 1" />
-            </div>
-            <div class="swiper-slide swiper-slide-next" style="width: 755px; margin-right: 30px">
-              <img class="" src="/banner-2.png" alt="Slide 2" />
-            </div>
-            <div class="swiper-slide" style="width: 755px; margin-right: 30px">
-              <img class="" src="/banner-3.png" alt="Slide 3" />
-            </div>
-          </div>
-          <div class="swiper-button-prev swiper-button-disabled"></div>
-          <div class="swiper-button-next"></div>
-          <div
-            class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
-            <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span
-              class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span>
-          </div>
-        </div>
+        <q-carousel animated v-model="slide" navigation infinite :autoplay="autoplay" arrows transition-prev="slide-right"
+          transition-next="slide-left" @mouseenter="autoplay = false" @mouseleave="autoplay = true"
+          class="rounded-md shadow-md lg:col-start-2 lg:col-end-5 lg:col-span-3 w-full h-full">
+          <q-carousel-slide :name="1" img-src="https://cdn.quasar.dev/img/mountains.jpg" />
+          <q-carousel-slide :name="2" img-src="https://cdn.quasar.dev/img/parallax1.jpg" />
+          <q-carousel-slide :name="3" img-src="https://cdn.quasar.dev/img/parallax2.jpg" />
+          <q-carousel-slide :name="4" img-src="https://cdn.quasar.dev/img/quasar.jpg" />
+        </q-carousel>
+
         <div class="lg:block lg:col-start-5 shadow-md h-full cursor-pointer rounded-md overflow-hidden relative">
 
           <a href="/products"><iframe class="h-full object-cover duration-500 hover:scale-110" width="100%"
@@ -123,31 +107,31 @@
                   now</span></a></button>
           </div>
 
-      </div>
-      <div class="mx-auto px-5 lg:px-11 pb-10 lg:w-5/6 lg:pb-20  pt-5 lg:pt-16 ">
-            <h3
-              class="text-caption-2 lg:text-caption-1 text-center text-primary-100 text-emerald-500 text-2xl mb-5 font-bold">
-              Explore Categories</h3>
-            <h2 class="text-heading-4 lg:text-heading-2 mt-2 text-center mb-7 text-3xl font-bold text-slate-600">Our Great
-              Categories</h2>
-            <div class="grid gap-2  lg:gap-10 grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
-              <div class="transition duration-200 group rounded-3xl py-5 border hover:border-emerald-300 shadow-md "><a
-                  class="" href="products"><img alt="Food Menu" loading="lazy" decoding="async" data-nimg="1"
-                    class="group-hover:scale-95  aspect-square object-cover rounded-full mx-auto w-2/3 duration-200 -z-10 filter brightness-110 saturate-100"
-                    src="https://i.pinimg.com/564x/98/6a/29/986a29d5c12bbf9c0673bc3a24b4a2c6.jpg"
-                    style="color: transparent;">
-                  <div class="text-center">
-                    <h5
-                      class="pt-3  text-md lg:text-2xl lg:text-heading-3 text-slate-600 hover:text-primary-100  transition duration-300 font-semibold inline-block w-full whitespace-nowrap overflow-hidden text-ellipsis px-10">
-                      Bonsais</h5>
-                    <h3 class="text-caption-2 pb-2 text-emerald-500  text-base font-semibold">6 Products</h3>
-                  </div>
-                </a></div>
-              <div class="transition duration-200 group rounded-3xl py-5 border hover:border-emerald-300 shadow-md "><a
-                  class="" href="products"><img alt="Food Menu" loading="lazy" decoding="async" data-nimg="1"
-                    class="group-hover:scale-95  aspect-square object-cover rounded-full mx-auto w-2/3 duration-200 -z-10 filter brightness-110 saturate-100"
-                    src="https://i.pinimg.com/736x/98/1f/8d/981f8d87d0aac840098fd7820217a9bd.jpg"
-                    style="color: transparent;">
+        </div>
+        <div class="mx-auto px-5 lg:px-11 pb-10 lg:w-5/6 lg:pb-20  pt-5 lg:pt-16 ">
+          <h3
+            class="text-caption-2 lg:text-caption-1 text-center text-primary-100 text-emerald-500 text-2xl mb-5 font-bold">
+            Explore Categories</h3>
+          <h2 class="text-heading-4 lg:text-heading-2 mt-2 text-center mb-7 text-3xl font-bold text-slate-600">Our Great
+            Categories</h2>
+          <div class="grid gap-2  lg:gap-10 grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
+            <div class="transition duration-200 group rounded-3xl py-5 border hover:border-emerald-300 shadow-md "><a
+                class="" href="products"><img alt="Food Menu" loading="lazy" decoding="async" data-nimg="1"
+                  class="group-hover:scale-95  aspect-square object-cover rounded-full mx-auto w-2/3 duration-200 -z-10 filter brightness-110 saturate-100"
+                  src="https://i.pinimg.com/564x/98/6a/29/986a29d5c12bbf9c0673bc3a24b4a2c6.jpg"
+                  style="color: transparent;">
+                <div class="text-center">
+                  <h5
+                    class="pt-3  text-md lg:text-2xl lg:text-heading-3 text-slate-600 hover:text-primary-100  transition duration-300 font-semibold inline-block w-full whitespace-nowrap overflow-hidden text-ellipsis px-10">
+                    Bonsais</h5>
+                  <h3 class="text-caption-2 pb-2 text-emerald-500  text-base font-semibold">6 Products</h3>
+                </div>
+              </a></div>
+            <div class="transition duration-200 group rounded-3xl py-5 border hover:border-emerald-300 shadow-md "><a
+                class="" href="products"><img alt="Food Menu" loading="lazy" decoding="async" data-nimg="1"
+                  class="group-hover:scale-95  aspect-square object-cover rounded-full mx-auto w-2/3 duration-200 -z-10 filter brightness-110 saturate-100"
+                  src="https://i.pinimg.com/736x/98/1f/8d/981f8d87d0aac840098fd7820217a9bd.jpg"
+                  style="color: transparent;">
                 <div class="text-center">
                   <h5
                     class="pt-3  text-md lg:text-2xl lg:text-heading-3 text-slate-600 hover:text-primary-100  transition duration-300 font-semibold inline-block w-full whitespace-nowrap overflow-hidden text-ellipsis px-10">
@@ -169,29 +153,334 @@
               </a></div>
           </div>
         </div>
-    </div>
-  </div>
+        <div class="mb-10 px-2 lg:px-10 py-10 bg-white rounded-lg">
+          <h2 class="text-center tex-heading-4 mt-2 mb-7 font-bold text-3xl ">Special Products</h2>
+          <div class="mt-8 grid gap-16 grid-cols-4 px-5">
+            
+          </div>
+        </div>
+        <div class="mb-10 px-2 lg:px-10 py-10 bg-white rounded-lg">
+          <h2 class="text-center tex-heading-4 mt-2 mb-7 font-bold text-3xl ">Most Popular Products</h2>
+          <div class="mt-8 grid gap-16 grid-cols-4 px-5">
 
-  
-</div></template>
+            <div class="card">
+              <div class="poster"><img src="https://themebun.com/public/frontent/img/thiet-ke-website-87.jpg"
+                  alt="location unknown"></div>
+              <div class="details">
+                <h1>location unknown</h1>
+                <h2>2021 • pg • 1hr 38min</h2>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <span>4.2/5</span>
+                </div>
+                <div class="tags">
+                  <span class="tag">italian</span>
+                  <span class="tag">drama</span>
+                  <span class="tag">indie</span>
+                </div>
+                <p class="desc">
+                  marco, a disillusioned backpacker in his late 20s, embarks on a solitary journey in search for
+                  meaning.
+                </p>
+                <div class="cast ">
+                  <q-btn-group rounded class="bg-emerald-300"  >
+                    <q-btn  rounded glossy icon="timeline" />
+                    <q-btn  rounded glossy icon="visibility" />
+                    <q-btn  rounded glossy icon-right="update" label="Update" />
+                  </q-btn-group>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="poster"><img src="https://themebun.com/public/frontent/img/thiet-ke-website-87.jpg"
+                  alt="location unknown"></div>
+              <div class="details">
+                <h1>location unknown</h1>
+                <h2>2021 • pg • 1hr 38min</h2>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <span>4.2/5</span>
+                </div>
+                <div class="tags">
+                  <span class="tag">italian</span>
+                  <span class="tag">drama</span>
+                  <span class="tag">indie</span>
+                </div>
+                <p class="desc">
+                  marco, a disillusioned backpacker in his late 20s, embarks on a solitary journey in search for
+                  meaning.
+                </p>
+                <div class="cast ">
+                  <q-btn-group rounded class="bg-emerald-300"  >
+                    <q-btn  rounded glossy icon="timeline" />
+                    <q-btn  rounded glossy icon="visibility" />
+                    <q-btn  rounded glossy icon-right="cart" label="Update" />
+                  </q-btn-group>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="poster"><img src="https://themebun.com/public/frontent/img/thiet-ke-website-87.jpg"
+                  alt="location unknown"></div>
+              <div class="details">
+                <h1>location unknown</h1>
+                <h2>2021 • pg • 1hr 38min</h2>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <span>4.2/5</span>
+                </div>
+                <div class="tags">
+                  <span class="tag">italian</span>
+                  <span class="tag">drama</span>
+                  <span class="tag">indie</span>
+                </div>
+                <p class="desc">
+                  marco, a disillusioned backpacker in his late 20s, embarks on a solitary journey in search for
+                  meaning.
+                </p>
+                <div class="cast ">
+                  <q-btn-group rounded class="bg-emerald-300"  >
+                    <q-btn  rounded glossy icon="timeline" />
+                    <q-btn  rounded glossy icon="visibility" />
+                    <q-btn  rounded glossy icon-right="update" label="Update" />
+                  </q-btn-group>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="poster"><img src="https://themebun.com/public/frontent/img/thiet-ke-website-87.jpg"
+                  alt="location unknown"></div>
+              <div class="details">
+                <h1>location unknown</h1>
+                <h2>2021 • pg • 1hr 38min</h2>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <span>4.2/5</span>
+                </div>
+                <div class="tags">
+                  <span class="tag">italian</span>
+                  <span class="tag">drama</span>
+                  <span class="tag">indie</span>
+                </div>
+                <p class="desc">
+                  marco, a disillusioned backpacker in his late 20s, embarks on a solitary journey in search for
+                  meaning.
+                </p>
+                <div class="cast ">
+                  <q-btn-group rounded class="bg-emerald-300"  >
+                    <q-btn  rounded glossy icon="timeline" />
+                    <q-btn  rounded glossy icon="visibility" />
+                    <q-btn  rounded glossy icon-right="update" label="Update" />
+                  </q-btn-group>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="poster"><img src="https://themebun.com/public/frontent/img/thiet-ke-website-87.jpg"
+                  alt="location unknown"></div>
+              <div class="details">
+                <h1>location unknown</h1>
+                <h2>2021 • pg • 1hr 38min</h2>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <span>4.2/5</span>
+                </div>
+                <div class="tags">
+                  <span class="tag">italian</span>
+                  <span class="tag">drama</span>
+                  <span class="tag">indie</span>
+                </div>
+                <p class="desc">
+                  marco, a disillusioned backpacker in his late 20s, embarks on a solitary journey in search for
+                  meaning.
+                </p>
+                <div class="cast ">
+                  <q-btn-group rounded class="bg-emerald-300"  >
+                    <q-btn  rounded glossy icon="timeline" />
+                    <q-btn  rounded glossy icon="visibility" />
+                    <q-btn  rounded glossy icon-right="update" label="Update" />
+                  </q-btn-group>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="poster"><img src="https://themebun.com/public/frontent/img/thiet-ke-website-87.jpg"
+                  alt="location unknown"></div>
+              <div class="details">
+                <h1>location unknown</h1>
+                <h2>2021 • pg • 1hr 38min</h2>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <span>4.2/5</span>
+                </div>
+                <div class="tags">
+                  <span class="tag">italian</span>
+                  <span class="tag">drama</span>
+                  <span class="tag">indie</span>
+                </div>
+                <p class="desc">
+                  marco, a disillusioned backpacker in his late 20s, embarks on a solitary journey in search for
+                  meaning.
+                </p>
+                <div class="cast ">
+                  <q-btn-group rounded class="bg-emerald-300"  >
+                    <q-btn  rounded glossy icon="timeline" />
+                    <q-btn  rounded glossy icon="visibility" />
+                    <q-btn  rounded glossy icon-right="update" label="Update" />
+                  </q-btn-group>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="poster"><img src="https://themebun.com/public/frontent/img/thiet-ke-website-87.jpg"
+                  alt="location unknown"></div>
+              <div class="details">
+                <h1>location unknown</h1>
+                <h2>2021 • pg • 1hr 38min</h2>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <span>4.2/5</span>
+                </div>
+                <div class="tags">
+                  <span class="tag">italian</span>
+                  <span class="tag">drama</span>
+                  <span class="tag">indie</span>
+                </div>
+                <p class="desc">
+                  marco, a disillusioned backpacker in his late 20s, embarks on a solitary journey in search for
+                  meaning.
+                </p>
+                <div class="cast ">
+                  <q-btn-group rounded class="bg-emerald-300"  >
+                    <q-btn  rounded glossy icon="timeline" />
+                    <q-btn  rounded glossy icon="visibility" />
+                    <q-btn  rounded glossy icon-right="update" label="Update" />
+                  </q-btn-group>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="poster"><img src="https://themebun.com/public/frontent/img/thiet-ke-website-87.jpg"
+                  alt="location unknown"></div>
+              <div class="details">
+                <h1>location unknown</h1>
+                <h2>2021 • pg • 1hr 38min</h2>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <span>4.2/5</span>
+                </div>
+                <div class="tags">
+                  <span class="tag">italian</span>
+                  <span class="tag">drama</span>
+                  <span class="tag">indie</span>
+                </div>
+                <p class="desc">
+                  marco, a disillusioned backpacker in his late 20s, embarks on a solitary journey in search for
+                  meaning.
+                </p>
+                <div class="cast ">
+                  <q-btn-group rounded class="bg-emerald-300"  >
+                    <q-btn  rounded glossy icon="timeline" />
+                    <q-btn  rounded glossy icon="visibility" />
+                    <q-btn  rounded glossy icon-right="update" label="Update" />
+                  </q-btn-group>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="poster"><img src="https://themebun.com/public/frontent/img/thiet-ke-website-87.jpg"
+                  alt="location unknown"></div>
+              <div class="details">
+                <h1>location unknown</h1>
+                <h2>2021 • pg • 1hr 38min</h2>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <span>4.2/5</span>
+                </div>
+                <div class="tags">
+                  <span class="tag">italian</span>
+                  <span class="tag">drama</span>
+                  <span class="tag">indie</span>
+                </div>
+                <p class="desc">
+                  marco, a disillusioned backpacker in his late 20s, embarks on a solitary journey in search for
+                  meaning.
+                </p>
+                <div class="cast ">
+                  <q-btn-group rounded class="bg-emerald-300"  >
+                    <q-btn  rounded glossy icon="timeline" />
+                    <q-btn  rounded glossy icon="visibility" />
+                    <q-btn  rounded glossy icon-right="update" label="Update" />
+                  </q-btn-group>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</template>
 
 <script lang="ts">
-// import ExampleComponent from 'components/ExampleComponent.vue';
 import { defineComponent } from 'vue';
+
 
 import { ref } from 'vue';
 export default defineComponent({
   setup() {
     return {
       slide: ref(1),
-      fullscreen: ref(false),
+      autoplay: ref(true)
     };
   },
 });
 </script>
-<style>@import 'tailwindcss/base';
+<style>
+@import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css2?family=inter:wght@400;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -201,6 +490,7 @@ export default defineComponent({
   /* height: 2400px; */
   margin-left: 150px;
   margin-right: 150px;
+
 }
 
 .row {
@@ -219,4 +509,147 @@ export default defineComponent({
 
 .col-fourth {
   width: 24%;
+}
+
+/* card */
+.card {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  background: #000;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+.poster {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  overflow: hidden;
+}
+
+.poster::before {
+  content: '';
+  position: absolute;
+  bottom: -45%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: .3s;
+}
+
+.card:hover .poster::before {
+  bottom: 0;
+}
+
+.poster img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .3s;
+}
+
+.details {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding: 1.5em 1.5em 2em;
+  background: #000a;
+  backdrop-filter: blur(16px) saturate(120%);
+  transition: .3s;
+  color: #fff;
+  z-index: 2;
+}
+
+.card:hover .details {
+  bottom: 0;
+}
+
+.details h1,
+.details h2 {
+  font-weight: 700;
+}
+
+.details h1 {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+.details h2 {
+  font-weight: 400;
+  font-size: 1em;
+  margin-bottom: 10px;
+  opacity: .6;
+}
+
+.details .rating {
+  position: relative;
+  margin-bottom: 15px;
+  display: flex;
+  gap: .25em;
+}
+
+.details .rating i {
+  color: #e3c414;
+}
+
+.details .rating span {
+  margin-left: 0.25em;
+}
+
+.details .tags {
+  display: flex;
+  gap: .375em;
+  margin-bottom: .875em;
+  font-size: .85em;
+}
+
+.details .tags span {
+  padding: .35rem .65rem;
+  color: #fff;
+  border: 1.5px solid rgba(255 255 255 / 0.4);
+  border-radius: 4px;
+  border-radius: 50px;
+}
+
+.details .desc {
+  color: #fff;
+  opacity: .8;
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+
+.details .cast h3 {
+  margin-bottom: .5em;
+}
+
+.details .cast ul {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+  width: 100%;
+}
+
+.details .cast ul li {
+  list-style: none;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1.5px solid #fff;
+}
+
+.details .cast ul li img {
+  width: 100%;
+  height: 100%;
 }</style>

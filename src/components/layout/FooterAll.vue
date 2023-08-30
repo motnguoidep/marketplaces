@@ -1,6 +1,6 @@
 <template>
   <q-footer>
-    <div class="data-container bg:cover px-5">
+    <div class="data-container bg:cover px-5" style="height: 672px;">
       <div class="container mx-auto divide-y divide-white/40">
         <div class="flex flex-col lg:flex-row lg:justify-between lg:pb-16 lg:pt-20">
           <h2 class="text-heading-4 lg:text-heading-2 text-center leading-none text-white text-6xl font-black">
@@ -16,16 +16,67 @@
               </button>
             </div>
           </div>
+
         </div>
+        <div class="pb-14 pt-10">
+          <div class="flex flex-col space-y-10 lg:flex-row lg:space-x-[120px] lg:space-y-0">
+            <div class="flex flex-col space-y-8">
+              <h1 class="text-white text-3xl font-semibold">Atom Shop</h1>
+              <div class="text-white items-center space-x-1.5 flex">
+                <p class="text-body-2-regular !leading-none"><span class="font-bold">Email us</span> : example@gmail.com
+                </p>
+              </div>
+              <div class="flex items-center space-x-1.5 text-white">
+                <p class="text-body-2-regular !leading-none"><span class="font-bold">Call</span> : 123 45678910</p>
+              </div>
+              <div class="text-white item-center space-x-1.5 flex">
+                <p class="text-body-2-regular !leading-none"><span class="font-bold">Working Hours</span> : Monday - Friday, 08 am - 05 pm</p>
+              </div>
+              <div class="flex space-x-5">
+                <a class="group flex h-8 w-8 items-center justify-center rounded-full fa-brands fa-facebook fa-2xl" href="/"></a>
+                <a class="group flex h-8 w-8 items-center justify-center rounded-full fa-brands fa-instagram fa-2xl" href="/"></a>
+                <a class="group flex h-8 w-8 items-center justify-center rounded-full fa-brands fa-brands fa-twitter fa-2xl" href="/"></a>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-x-12 gap-y-10 lg:grid-cols-3 lg:gap-x-28 lg:gap-y-0">
+              <div class="flex flex-col space-y-6">
+                <p class="font-semibold text-xl text-white">Shopping</p>
+                <a class="text-body-3 text-white" href="">Products</a>
+                <a class="text-body-3 text-white" href="">My Cart</a>
+              </div>
+              <div class="flex flex-col space-y-6">
+                <p class="font-semibold text-xl text-white">Learn More</p>
+                <a class="text-body-3 text-white" href="">About Us</a>
+                <a class="text-body-3 text-white" href="">Contact Us</a>
+                <a class="text-body-3 text-white" href="">Terms & Conditions</a>
+                <a class="text-body-3 text-white" href="">Privacy Policy</a>
+              </div>
+              <div class="col-span-2 flex flex-col space-y-6 lg:col-span-1">
+                <p class="font-semibold text-xl text-white">Download The App</p>
+                <button class="lg:w-[145px] md:w-[120px]">
+                <img src="https://cn.maplesoft.com/products/MapleCalculator/images/app-store-icons-apple-app-store.png" alt="">
+                </button>
+                <button class="lg:w-[145px] md:w-[120px]">
+                <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png?hl=vi" alt="">
+                </button>
+              </div>
+          </div>
+          </div>
+
         </div>
-        <q-page-scroller position="bottom">
-    <q-btn fab icon="keyboard_arrow_up" color="red" />
-  </q-page-scroller>
       </div>
 
+    </div>
+    <q-page-scroller position="bottom">
+      <q-btn fab icon="keyboard_arrow_up" color="red" />
+    </q-page-scroller>
   </q-footer>
 </template>
 <style>
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 .data-container {
   background-image: linear-gradient(to bottom right, #2e2341, #0c378d);
   height: 100vh;
