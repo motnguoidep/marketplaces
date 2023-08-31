@@ -16,7 +16,6 @@
     "@headlessui/vue": "^1.7.16",
     "@heroicons/vue": "^2.0.18",
     "@quasar/extras": "^1.16.4",
-    "comics-api": "^2.8.7",
     "pinia": "^2.1.6",
     "quasar": "^2.6.0",
     "swiper": "^10.2.0",
